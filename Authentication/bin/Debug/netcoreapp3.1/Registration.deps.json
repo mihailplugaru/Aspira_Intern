@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Registration/1.0.0": {
+        "dependencies": {
+          "MailPassValidation": "1.0.0"
+        },
+        "runtime": {
+          "Registration.dll": {}
+        }
+      },
+      "MailPassValidation/1.0.0": {
+        "runtime": {
+          "MailPassValidation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Registration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MailPassValidation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

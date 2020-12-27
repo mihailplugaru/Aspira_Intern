@@ -1,0 +1,16 @@
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\CSdotNetBasics.exe
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\CSdotNetBasics.deps.json
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\CSdotNetBasics.runtimeconfig.json
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\CSdotNetBasics.runtimeconfig.dev.json
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\CSdotNetBasics.dll
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\ref\CSdotNetBasics.dll
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\bin\Debug\net5.0\CSdotNetBasics.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.csprojAssemblyReference.cache
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.AssemblyInfoInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.AssemblyInfo.cs
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.csproj.CoreCompileInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.dll
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\ref\CSdotNetBasics.dll
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\CSdotNetBasics\obj\Debug\net5.0\CSdotNetBasics.genruntimeconfig.cache
