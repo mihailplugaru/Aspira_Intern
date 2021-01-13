@@ -43,7 +43,6 @@ namespace Angles
             GetFirstsThreeBiggestAnglesFromList();
             Console.ReadKey();
 
-
             Console.WriteLine($"The approximate sum of {angle2} and {angle3} is: {SimpleAngleOperator.SumTwoAngles(angle2, angle3)}");
             Console.ReadKey();
 

@@ -1,0 +1,26 @@
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.exe
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.deps.json
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.runtimeconfig.json
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.runtimeconfig.dev.json
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.dll
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.pdb
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.csprojAssemblyReference.cache
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.AssemblyInfoInputs.cache
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.AssemblyInfo.cs
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.csproj.CoreCompileInputs.cache
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.dll
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.pdb
+C:\Users\user-drgn\source\repos\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.genruntimeconfig.cache
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.exe
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.deps.json
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.runtimeconfig.json
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.runtimeconfig.dev.json
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.dll
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\bin\Debug\netcoreapp3.1\UsingDelegatesApp2.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.csprojAssemblyReference.cache
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.AssemblyInfoInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.AssemblyInfo.cs
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.csproj.CoreCompileInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.dll
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\UsingDelegatesApp2\UsingDelegatesApp2\obj\Debug\netcoreapp3.1\UsingDelegatesApp2.genruntimeconfig.cache

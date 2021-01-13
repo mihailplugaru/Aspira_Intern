@@ -1,0 +1,7 @@
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\bin\Debug\Reflection_Attributes.exe.config
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\bin\Debug\Reflection_Attributes.exe
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\bin\Debug\Reflection_Attributes.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\obj\Debug\Reflection_Attributes.csprojAssemblyReference.cache
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\obj\Debug\Reflection_Attributes.csproj.CoreCompileInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\obj\Debug\Reflection_Attributes.exe
+C:\Users\mplugaru\Downloads\To read\Internship\Reflection_Attributes\obj\Debug\Reflection_Attributes.pdb

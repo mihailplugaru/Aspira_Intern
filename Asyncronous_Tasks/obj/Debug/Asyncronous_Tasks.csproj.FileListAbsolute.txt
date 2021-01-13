@@ -1,0 +1,10 @@
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\bin\Debug\Asyncronous_Tasks.exe.config
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\bin\Debug\Asyncronous_Tasks.exe
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\bin\Debug\Asyncronous_Tasks.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\obj\Debug\Asyncronous_Tasks.csprojAssemblyReference.cache
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\obj\Debug\Asyncronous_Tasks.csproj.CoreCompileInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\obj\Debug\Asyncronous_Tasks.csproj.CopyComplete
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\obj\Debug\Asyncronous_Tasks.exe
+C:\Users\mplugaru\Downloads\To read\Internship\Asyncronous_Tasks\obj\Debug\Asyncronous_Tasks.pdb

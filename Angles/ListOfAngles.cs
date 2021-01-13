@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Angles
@@ -34,14 +35,14 @@ namespace Angles
             }
             Console.WriteLine();
         }
-        ////////////////////////////////////////////////////////
+
         public SimpleAngle this[int index]
         {
             get => listOfAngles[index];
             set => listOfAngles[index] = value;
         }
-        ///////////////////////////////////////////////////////
-        public IEnumerator<SimpleAngle> GetEnumerator()
+
+         public IEnumerator<SimpleAngle> GetEnumerator()
         {
          //   listOfAngles.Sort();
          //   listOfAngles.Reverse();
@@ -62,12 +63,11 @@ namespace Angles
             yield return listOfAngles[2];
         }
 
-        System.Collections.IEnumerator
-        System.Collections.IEnumerable.GetEnumerator()
+        IEnumerator
+        IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
-        ///////////////////////////////////////////////////////
     }
 }
 

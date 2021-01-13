@@ -1,0 +1,7 @@
+C:\Users\mplugaru\Downloads\To read\Internship\Events\bin\Release\Events.exe.config
+C:\Users\mplugaru\Downloads\To read\Internship\Events\bin\Release\Events.exe
+C:\Users\mplugaru\Downloads\To read\Internship\Events\bin\Release\Events.pdb
+C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Release\Events.csprojAssemblyReference.cache
+C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Release\Events.csproj.CoreCompileInputs.cache
+C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Release\Events.exe
+C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Release\Events.pdb
