@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\bin\Debug\ToDelete.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\bin\Debug\ToDelete.exe
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\bin\Debug\ToDelete.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\obj\Debug\ToDelete.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\obj\Debug\ToDelete.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\obj\Debug\ToDelete.exe
-C:\Users\mplugaru\Downloads\To read\Internship\ToDelete\obj\Debug\ToDelete.pdb

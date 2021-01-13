@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\bin\Debug\LINQ.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\bin\Debug\LINQ.exe
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\bin\Debug\LINQ.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\obj\Debug\LINQ.exe
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\obj\Debug\LINQ.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\LINQ\obj\Debug\LINQ.csprojAssemblyReference.cache

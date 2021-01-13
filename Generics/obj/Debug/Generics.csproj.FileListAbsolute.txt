@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\bin\Debug\Generics.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\bin\Debug\Generics.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\bin\Debug\Generics.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\obj\Debug\Generics.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\obj\Debug\Generics.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\obj\Debug\Generics.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Generics\obj\Debug\Generics.pdb

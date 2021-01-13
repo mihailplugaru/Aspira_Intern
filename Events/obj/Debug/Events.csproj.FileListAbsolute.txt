@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\Events\bin\Debug\Events.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\Events\bin\Debug\Events.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Events\bin\Debug\Events.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Debug\Events.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Debug\Events.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Debug\Events.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Events\obj\Debug\Events.pdb

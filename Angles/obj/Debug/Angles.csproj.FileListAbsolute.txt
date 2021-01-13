@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\bin\Debug\Angles.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\bin\Debug\Angles.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\bin\Debug\Angles.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\obj\Debug\Angles.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\obj\Debug\Angles.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\obj\Debug\Angles.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Angles\obj\Debug\Angles.pdb

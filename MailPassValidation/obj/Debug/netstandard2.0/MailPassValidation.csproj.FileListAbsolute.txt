@@ -1,9 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\bin\Debug\netstandard2.0\MailPassValidation.deps.json
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\bin\Debug\netstandard2.0\MailPassValidation.dll
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\bin\Debug\netstandard2.0\MailPassValidation.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\obj\Debug\netstandard2.0\MailPassValidation.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\obj\Debug\netstandard2.0\MailPassValidation.AssemblyInfoInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\obj\Debug\netstandard2.0\MailPassValidation.AssemblyInfo.cs
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\obj\Debug\netstandard2.0\MailPassValidation.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\obj\Debug\netstandard2.0\MailPassValidation.dll
-C:\Users\mplugaru\Downloads\To read\Internship\MailPassValidation\obj\Debug\netstandard2.0\MailPassValidation.pdb

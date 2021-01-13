@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\bin\Debug\CS.NET_Part2.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\bin\Debug\CS.NET_Part2.exe
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\bin\Debug\CS.NET_Part2.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\obj\Debug\CS .NET_Part2.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\obj\Debug\CS .NET_Part2.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\obj\Debug\CS.NET_Part2.exe
-C:\Users\mplugaru\Downloads\To read\Internship\CS .NET_Part2\obj\Debug\CS.NET_Part2.pdb

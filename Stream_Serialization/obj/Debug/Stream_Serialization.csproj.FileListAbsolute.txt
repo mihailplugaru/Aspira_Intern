@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\bin\Debug\Stream_Serialization.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\bin\Debug\Stream_Serialization.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\bin\Debug\Stream_Serialization.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\obj\Debug\Stream_Serialization.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\obj\Debug\Stream_Serialization.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\obj\Debug\Stream_Serialization.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Stream_Serialization\obj\Debug\Stream_Serialization.pdb

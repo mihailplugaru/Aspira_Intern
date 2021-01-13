@@ -1,7 +1,0 @@
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\bin\Debug\Collections.exe.config
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\bin\Debug\Collections.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\bin\Debug\Collections.pdb
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\obj\Debug\Collections.csprojAssemblyReference.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\obj\Debug\Collections.exe
-C:\Users\mplugaru\Downloads\To read\Internship\Collections\obj\Debug\Collections.pdb
