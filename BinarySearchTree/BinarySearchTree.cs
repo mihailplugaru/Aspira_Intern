@@ -138,9 +138,27 @@ namespace BinarySearchTree_DataStructures
         //{
         //    if (_globalRoot == null) yield break;
 
-        //    foreach (var v in FindRange(_globalRoot, value1, value2))
+        //    foreach (var node in FindRange(_globalRoot, value1, value2))
+        //        yield return node;
+        //}
+
+        //private static IEnumerable<T> FindRange(Node<T> root, T beginR, T endR)
+        //{
+        //    if (root == null)
         //    {
-        //        yield return v;
+        //         yield break;
+        //    }
+        //    if (beginR.CompareTo(root.Value) == -1)
+        //    {
+        //            FindRange(root.LeftNode, beginR, endR);
+        //    }
+        //    if (beginR.CompareTo(root.Value) <= 0 && endR.CompareTo(root.Value) >= 0)
+        //    {
+        //        yield return root.Value;
+        //    }
+        //    if (endR.CompareTo(root.Value) == 1)
+        //    {
+        //            FindRange(root.RightNode, beginR, endR);
         //    }
         //}
 
@@ -154,7 +172,7 @@ namespace BinarySearchTree_DataStructures
         {
             if (root == null)
             {
-                Console.WriteLine("There must not be a tree created");
+                return;
             }
             if (beginR.CompareTo(root.Value) == -1)
             {
@@ -162,8 +180,7 @@ namespace BinarySearchTree_DataStructures
             }
             if (beginR.CompareTo(root.Value) <= 0 && endR.CompareTo(root.Value) >= 0)
             {
-                //yield return root.Value;
-                Console.WriteLine($"{root.Value}  ");
+                Console.Write($"{root.Value}  ");
             }
             if (endR.CompareTo(root.Value) == 1)
             {

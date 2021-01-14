@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BinarySearchTree
+namespace BinarySearchTree_DataStructures
 {
-    public interface TreeNode<T>
+    public interface ITreeNode<T>
     {
         T getValue();
 
-        TreeNode<T> getLeft();
+        ITreeNode<T> getLeft();
 
-        TreeNode<T> getRight();
+        ITreeNode<T> getRight();
 
-        TreeNode<T> getParent();
+        ITreeNode<T> getParent();
     }
 }

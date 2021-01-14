@@ -161,21 +161,4 @@ namespace LINQ
 
     }
 }
-//var query = peoplePetsList.GroupBy(
-//    pet => Math.Floor(pet.Age),
-//    pet => pet.Age,
-//    (baseAge, ages) => new
-//    {
-//        Key = baseAge,
-//        Count = ages.Count(),
-//        Min = ages.Min(),
-//        Max = ages.Max()
-//    });
 
-//foreach (var result in query)
-//{
-//    Console.WriteLine("\nAge group : " + result.Key);
-//    Console.WriteLine("Nr of Pets in group : " + result.Count());
-//    Console.WriteLine("Min age : " + result.Min());
-//    Console.WriteLine("Max age : " + result.Max());
-//}

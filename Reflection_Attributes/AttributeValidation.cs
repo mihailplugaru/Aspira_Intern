@@ -1,45 +1,73 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Reflection;
 
 namespace Reflection_Attributes
 {
-    //[AttributeUsage(AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Property)]
     public class AttributeValidation : ValidationAttribute
     {
-        private string Message { get; set; }
-        private int valid = 0;
-        private int temp;
+        int i;
 
-        public AttributeValidation()
-        {
-            Message = "Need a Numerical and an Alphanumerical input!";
-                 //PropertyInfo[] myPropertyInfo;
-                //myPropertyInfo = Type.GetType("System.Type").GetProperties();
-                //Console.WriteLine("Properties of System.Type are:");
-               //for (int i = 0; i < myPropertyInfo.Length; i++)
-                //{
-               //    Console.WriteLine(myPropertyInfo[i].ToString());
-                     //}
-            PropertyInfo[] fields = Type.GetType("System.Type").GetProperties();
-            foreach (PropertyInfo field in fields)
-            {
-                bool isParsable = Int32.TryParse(field.ToString(), out temp);
-                if (field.PropertyType == typeof(string) && !isParsable)
-                {
-                    valid++;
-                }
-            }
-            if (valid != 1)
-            {
-                Console.WriteLine(Message);
-            }
-        }
+        //public override bool IsValid(object value)
+        //{
+        //    if (int.TryParse(value.ToString(), out i))
+        //    {
+        //        return true;
+        //    }
+        //    else return false;
+        //}
 
-        public override bool IsValid(object value)
+        public new ValidationResult Validate(object value, ValidationContext validationContext)
         {
-            return ;
+            var instance = (TestClassPerson)validationContext.ObjectInstance;
+
+            if ((int.TryParse(value.ToString(), out i)) ^ (int.TryParse(instance.PersonsAge.ToString(), out i)))
+            {
+                return ValidationResult.Success;
+            }
+            else return new ValidationResult("The inputs must not be the same data type");
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//protected override ValidationResult
+//        IsValid(object value, ValidationContext validationContext)
+//{
+//    var model = (Reflection_Attributes.TestClassPerson)validationContext.ObjectInstance;
+//    DateTime _lastDeliveryDate = Convert.ToDateTime(value);
+//    DateTime _dateJoin = Convert.ToDateTime(model.JoinDate);
+
+//    if (_dateJoin > _lastDeliveryDate)
+//    {
+//        return new ValidationResult
+//            ("Last Delivery Date can not be less than Join date.");
+//    }
+//    else if (_lastDeliveryDate > DateTime.Now)
+//    {
+//        return new ValidationResult
+//            ("Last Delivery Date can not be greater than current date.");
+//    }
+//    else
+//    {
+//        return ValidationResult.Success;
+//    }
+//}
 

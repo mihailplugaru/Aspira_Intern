@@ -1,8 +1,6 @@
-﻿using BinarySearchTree;
-
-namespace BinarySearchTree_DataStructures
+﻿namespace BinarySearchTree_DataStructures
 {
-    public class Node<T> : TreeNode<T>
+    public class Node<T> : ITreeNode<T>
     {
         public T Value { get; set; }
 
@@ -22,17 +20,17 @@ namespace BinarySearchTree_DataStructures
             return Value;
         }
 
-        public TreeNode<T> getLeft()
+        public ITreeNode<T> getLeft()
         {
             return LeftNode;
         }
 
-        public TreeNode<T> getRight()
+        public ITreeNode<T> getRight()
         {
             return RightNode;
         }
 
-        public TreeNode<T> getParent()
+        public ITreeNode<T> getParent()
         {
             return ParentNode;
         }
