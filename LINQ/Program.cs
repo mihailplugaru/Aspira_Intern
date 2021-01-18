@@ -11,11 +11,12 @@ namespace LINQ
         static void Main(string[] args)
         {
 
-            // DaysOfWeekSubtask();
+            //DaysOfWeekSubtask();
 
             //AreThereAnyNumbersSubtask1();
+            //AreThereAnyNumbersSubtask2();
 
-            //CompareTwoArrays();
+            CompareTwoArrays();
 
             PeoplePetsSubtask();
         }
@@ -52,7 +53,7 @@ namespace LINQ
 
             var myCondition = greaterNumbers.All(number => number % 2 == 0);
 
-            Console.WriteLine("{0} numbers greater than 10 are even.", myCondition ? "All" : "Not all");
+            Console.WriteLine("\n{0} numbers greater than 10 are even.", myCondition ? "All" : "Not all");
             Console.ReadKey();
         }
 
@@ -71,7 +72,7 @@ namespace LINQ
             int[] b = { 4, 2, 5, 6, 9, 30, 1, 33, 7 };
             int[] c = { 3, 6, 31, 3, 66, 9, 7, 21 };
 
-            Console.WriteLine("Common elements :");
+            Console.WriteLine("\nCommon elements :");
 
             var commonElements = b.Intersect(c);
 
@@ -85,7 +86,7 @@ namespace LINQ
             Console.WriteLine("\nElements that are in array b but not in array c :");
 
             var elementsInBOnly = b.Except(c);
-
+   
             foreach (var el in elementsInBOnly)
             {
                 Console.Write($"{el} ");
@@ -94,12 +95,25 @@ namespace LINQ
 
             Console.WriteLine("\nThe distinct elements from both arrays :");
 
-            //var distinctElements = b.Except(c).Concat(c.Except(b));
-            var distinctElements = b.Concat(c).Except(b.Intersect(c));
+            var distinctElements = b.Except(c).Concat(c.Except(b)).Concat(b.Intersect(c)).OrderBy(x => x);
+
+            //var distinctElements = b.Concat(c).Except(b.Intersect(c));
+
+            var dist = b.Concat(c).Distinct();
+
+            var distUnion = b.Union(c).OrderBy(x=> x);
+
+
 
             foreach (var el in distinctElements)
             {
                 Console.Write($"{el} ");
+            }
+            Console.ReadKey();
+            Console.WriteLine(       );
+            foreach (var el1 in distUnion)
+            {
+                Console.Write($"{el1} ");
             }
             Console.ReadKey();
         }
@@ -128,7 +142,7 @@ namespace LINQ
                 .Select(x => new
                 {
                     Key = x.Name,
-                    pets = x.Pets.OrderBy(y => y.Name).GroupBy(y => y.Type)
+                    pets = x.Pets.OrderBy(y => y.Name).GroupBy(y => y.Type)   //Pets
                 });
 
             Console.WriteLine("\nOwners and their pets (pets are grouped by type and ordered by name) ");
@@ -144,7 +158,6 @@ namespace LINQ
                     }
                 }
             }
-
             Console.ReadKey();
         }
 

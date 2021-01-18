@@ -3,10 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Reflection_Attributes
 {
-    [AttributeUsage(AttributeTargets.Property)]
+    //[AttributeUsage(AttributeTargets.Property)]
     public class AttributeValidation : ValidationAttribute
     {
-        int i;
 
         //public override bool IsValid(object value)
         //{
@@ -17,11 +16,13 @@ namespace Reflection_Attributes
         //    else return false;
         //}
 
-        public new ValidationResult Validate(object value, ValidationContext validationContext)
+
+
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var instance = (TestClassPerson)validationContext.ObjectInstance;
 
-            if ((int.TryParse(value.ToString(), out i)) ^ (int.TryParse(instance.PersonsAge.ToString(), out i)))
+            if ((int.TryParse(value.ToString(), out int _)) ^ (int.TryParse(instance.PersonsAge.ToString(), out int _)))
             {
                 return ValidationResult.Success;
             }
