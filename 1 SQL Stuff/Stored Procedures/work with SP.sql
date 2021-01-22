@@ -41,3 +41,11 @@ SELECT STUFF(@Name2,6,5,'Nicolaevich') as SomeoneRandom
 
 --------Functions using Numbers
 SELECT AVG(PhoneNumber) AS UselessNumber FROM Interns;
+declare @Number varchar(50);
+set @Number = (SELECT MAX(PhoneNumber) AS LargestNumber FROM Interns);
+print @Number;
+SELECT SQRT(@Number) as SquareRootOfSomeNumber
+set @Number = (SELECT SQRT(@Number) as SquareRootOfSomeNumber);
+SELECT FLOOR(@Number) AS FloorValue;
+
+
