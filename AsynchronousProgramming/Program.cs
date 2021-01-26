@@ -15,38 +15,9 @@ namespace AsynchronousProgramming
             var routes = DownloadContentWithToken(token, "/api/routes").Result;
 
             GetKeywordsTaskWhenAnyFinished(token, routes);
-            GetKeywordsTaskWhenAllFinished(token, routes);
         }
 
-        public static async Task GetKeywordsTaskWhenAllFinished(string token, List<string> routes)
-        {
-            List<Task<List<string>>> subroutesTasks = new List<Task<List<string>>>();
-            List<Task<string>> keywordsTasks = new List<Task<string>>();
-
-            foreach (string route in routes)
-            {
-                subroutesTasks.Add(DownloadContentWithToken(token, route));
-                Console.WriteLine(route);
-            }
-
-            var subroutes = Task.WhenAll(subroutesTasks);
-
-            foreach (List<string> keywordRoute in subroutes.Result)
-            {
-                foreach (string keyword in keywordRoute)
-                {
-                    keywordsTasks.Add(GetKeyword(token, keyword));
-                    Console.WriteLine(keyword);
-                }
-            }
-            var keywords = Task.WhenAll(keywordsTasks).Result;
-
-            foreach (string keyword in keywords)
-                Console.WriteLine( keyword);
-
-        }
-
-        public static async Task GetKeywordsTaskWhenAnyFinished(string token, List<string> routes)
+        public static void GetKeywordsTaskWhenAnyFinished(string token, List<string> routes)
         {
             List<Task<List<string>>> subroutes = new List<Task<List<string>>>();
             List<Task<string>> keywords = new List<Task<string>>();

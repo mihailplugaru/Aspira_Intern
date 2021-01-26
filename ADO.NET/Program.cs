@@ -20,8 +20,8 @@ namespace ADO.NET
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                CreateTableInterns(connection);
-                CreateTableInternsPhoneNumbers(connection);
+                InitiateTableInterns(connection);
+                InitiateTableInternsPhoneNumbers(connection);
 
                 internsAdapter = CreateSqlDataAdapterInterns(connection);
                 internsPNAdapter = CreateSqlDataAdapterInternsPN(connection);
@@ -37,6 +37,7 @@ namespace ADO.NET
                 DeleteRow();
                 Console.ReadKey();
 
+                Console.WriteLine("Compare the data...");
                 SelectAllFromInterns(connection);
                 SelectAllFromInternsPN(connection);
             }
@@ -95,10 +96,6 @@ namespace ADO.NET
             internsAdapter.Fill(dataSet, "Interns");
             internsPNAdapter.Fill(dataSet, "InternsPhoneNumbers");
 
-            //DataColumn id = dataTable1.Columns.Add("ID", typeof(Int32));
-            //id.AutoIncrement = true;
-            //id.AutoIncrementSeed = 2;
-            //id.AutoIncrementStep = 3;
             dataTable1 = dataSet.Tables["Interns"];
             Console.WriteLine("\n'Interns' added to DataSet");
 
@@ -157,7 +154,7 @@ namespace ADO.NET
             try
             {
                 //update in table1 - Intern data
-                //dataTable1.Rows[1]["FullName"] = "Wannabe Second";
+                //dataTable1.Rows[2]["FullName"] = "Wannabe Second";
                 foreach (DataRow row in dataTable1.Rows)
                 {
                     if ((int)row["ID"] == 3) row["FullName"] = "Wannabe Second";
@@ -192,6 +189,23 @@ namespace ADO.NET
             Console.WriteLine("\nDeleting a row from the tables...");
             try
             {
+                ////Detelete a row from table2 - Phone data
+                for (int i = dataTable2.Rows.Count - 1; i >= 0; i--)
+                {
+                    DataRow dr = dataTable2.Rows[i];
+                    if ((int)dr["InternID"] == 1)
+                        dr.Delete();
+                }
+                internsPNAdapter.Update(dataSet, "InternsPhoneNumbers");
+                dataTable2.AcceptChanges();
+
+                Console.WriteLine("\nDataTable InternsPhoneNumbers looks like:\n");
+                foreach (DataRow row in dataTable2.Rows)
+                {
+                    Console.WriteLine(row["InternID"].ToString() + "    " + row["PhoneNumber"].ToString());
+                }
+                //Update the DB with changes in table2 above
+
                 //Detelete a row from table1 - Intern data
                 for (int i = dataTable1.Rows.Count - 1; i >= 0; i--)
                 {
@@ -199,6 +213,7 @@ namespace ADO.NET
                     if ((int)dr["ID"] == 1)
                         dr.Delete();
                 }
+                internsAdapter.Update(dataSet, "Interns");
                 dataTable1.AcceptChanges();
 
                 Console.WriteLine("\nDataTable Interns looks like:\n");
@@ -207,23 +222,6 @@ namespace ADO.NET
                     Console.WriteLine(row["ID"].ToString() + "    " + row["FullName"].ToString());
                 }
                 //Update the DB with changes in table1 above
-                internsAdapter.Update(dataSet, "Interns");
-
-                ////Detelete a row from table2 - Phone data
-                for (int i = dataTable2.Rows.Count - 1; i >= 0; i--)
-                {
-                    DataRow dr = dataTable2.Rows[i];
-                    if ((int)dr["InternID"] == 1)
-                        dr.Delete();
-                }
-                dataTable2.AcceptChanges();
-                Console.WriteLine("\nDataTable InternsPhoneNumbers looks like:\n");
-                foreach (DataRow row in dataTable2.Rows)
-                {
-                    Console.WriteLine(row["InternID"].ToString() + "    " + row["PhoneNumber"].ToString());
-                }
-                //Update the DB with changes in table2 above
-                internsPNAdapter.Update(dataSet, "InternsPhoneNumbers");
             }
             catch (Exception e)
             {
@@ -271,10 +269,10 @@ namespace ADO.NET
             }
         }
 
-        static void CreateTableInterns(SqlConnection connection)
+        static void InitiateTableInterns(SqlConnection connection)
         {
             var sqlCommandText = "CREATE TABLE Interns(ID int not null   identity(1,1) primary key, FullName NVARCHAR(55));"+
-                                 "INSERT INTO Interns(FullName) VALUES ('First Name');";
+                                 "INSERT INTO Interns(FullName) VALUES ('Someones Name');";
             using (var sqlCommand = new SqlCommand(sqlCommandText, connection))
             {
                 try
@@ -289,7 +287,7 @@ namespace ADO.NET
             }
         }
 
-        static void CreateTableInternsPhoneNumbers(SqlConnection connection)
+        static void InitiateTableInternsPhoneNumbers(SqlConnection connection)
         {
             var sqlCommandText = "CREATE TABLE InternsPhoneNumbers(InternID int FOREIGN KEY REFERENCES Interns(ID) primary key, PhoneNumber bigint unique);" +
                                  "INSERT INTO InternsPhoneNumbers(InternID, PhoneNumber) VALUES (1, 61626364);";

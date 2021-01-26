@@ -7,8 +7,8 @@ BEGIN -- use body wrappers around whole body
 
   EXEC dbo.CreateTableWith4Columns 'Interns'
 
-  --SAVE Transaction SP2
   EXEC dbo.InsertTenRows 'Interns'
+
   COMMIT
-  END
+END
 GO
