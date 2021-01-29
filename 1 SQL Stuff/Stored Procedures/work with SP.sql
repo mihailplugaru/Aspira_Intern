@@ -8,14 +8,9 @@ DROP TABLE dbo.Interns
 --EXEC dbo.InsertTenRows 'Interns'
 EXEC dbo.CallTwoOtherSPs
 
-Rollback Transaction SP2
+--Rollback Transaction SP2
 
 select * from Interns
-
---INSERT INTO dbo.Interns
---([FullName], [PhoneNumber])
---VALUES
---('o', 216598764)
 
 
 --------Functions using DATE

@@ -4,7 +4,7 @@ AS
 BEGIN -- use body wrappers around whole body
   SET NOCOUNT ON; 
 
-  DECLARE @SQL NVARCHAR(MAX); -- dynamic SQL should always be Unicode
+  DECLARE @SQL NVARCHAR(MAX);
 
   SELECT @SQL = 'CREATE TABLE dbo.' + QUOTENAME(@TABLENAME) + '('
     + 'InternId        INT    NOT NULL IDENTITY  PRIMARY KEY,

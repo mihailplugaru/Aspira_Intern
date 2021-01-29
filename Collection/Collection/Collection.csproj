@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{391B08D3-54D7-4504-8797-44A349C0D0FD}</ProjectGuid>
+    <ProjectGuid>{E8F43AC3-A0FC-4F92-95B0-B43021097800}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Stream_Serialization</RootNamespace>
-    <AssemblyName>Stream_Serialization</AssemblyName>
+    <RootNamespace>Collection</RootNamespace>
+    <AssemblyName>Collection</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Watcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
