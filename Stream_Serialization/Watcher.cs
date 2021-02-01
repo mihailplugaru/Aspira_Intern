@@ -48,7 +48,7 @@ namespace Stream_Serialization
             var pathd2 = Path.Combine(SecondDir + "\\" + e.Name);
             var extension = Path.GetExtension(e.FullPath);
 
-            if (extension == ".txt" || extension == ".rtf")
+            if (IsTextFile(extension))
             {
                 if (e.ChangeType.ToString() == "Deleted")
                 {
@@ -99,7 +99,7 @@ namespace Stream_Serialization
             var oldPath = Path.Combine(SecondDir + @"\" + e.OldName);
             var extension = Path.GetExtension(e.FullPath);
 
-            if (extension == ".txt" || extension == ".rtf")
+            if (IsTextFile(extension))
             {
                 try
                 {
@@ -203,6 +203,11 @@ namespace Stream_Serialization
             {
                 SyncDir(dname, secdir);
             }
+        }
+
+        public static bool IsTextFile(string extension)
+        {
+            return extension == ".txt" || extension == ".rtf";
         }
     }
 }

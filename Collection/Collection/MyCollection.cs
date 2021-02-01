@@ -1,64 +1,195 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Collection
 {
-    public class MyCollection<T> : IList<T>
+    public class MyCollection<T> : IEnumerable, IEnumerator
     {
-        public T this[int index] { get => this[index]; set => this[index] = value; }
+        private T[] arrayList;
 
-        public int Count => throw new System.NotImplementedException();
+        int position = -1;
 
-        public bool IsReadOnly => throw new System.NotImplementedException();
+        int count = 0;
+
+        public MyCollection()
+        {
+            arrayList = new T[4];
+        }
+
+        public T this[int index]
+        {
+            get => arrayList[index];
+            set => arrayList[index] = value;
+        }
+
+        internal int Capacity => arrayList.Length;
+
+        public int Count => count;
 
         public void Add(T item)
         {
-            throw new System.NotImplementedException();
+            Add(item, count);
+            count++;
+        }
+        
+        public void AddRange(IEnumerable<T> inputCollection)
+        {
+            foreach(var element in inputCollection) {
+                Add(element, count);
+                count++;
+            }
         }
 
-        public void Clear()
+        private void Add(T item, int position)
         {
-            throw new System.NotImplementedException();
+            HandleFullCollection();
+            arrayList[position] = item;
         }
 
-        public bool Contains(T item)
+        public void HandleFullCollection()
         {
-            throw new System.NotImplementedException();
+            if (count >= arrayList.Length)
+            {
+                Array.Resize(ref arrayList, arrayList.Length * 2);
+            }
         }
 
-        public void CopyTo(T[] array, int arrayIndex)
+        public object Current => arrayList[position];
+
+        public bool MoveNext()
         {
-            throw new System.NotImplementedException();
+            if (position < count - 1)
+            {
+                position++;
+                return true;
+            }
+            return false;
         }
 
-        public IEnumerator<T> GetEnumerator()
+        public void Reset()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public int IndexOf(T item)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Insert(int index, T item)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool Remove(T item)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void RemoveAt(int index)
-        {
-            throw new System.NotImplementedException();
+            position = -1;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return this;
+        }
+
+        public void Clear()
+        {
+            arrayList = new T[4];
+            count = 0;
+        }
+
+        public bool Contains(T item)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (arrayList[i].Equals(item))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            if (arrayIndex >= 0 && arrayIndex < array.Length)
+            {
+                int listIndex = 0;
+                for (int i = arrayIndex; i < array.Length; i++)
+                {
+                    if (listIndex < count)
+                    {
+                        array[i] = arrayList[listIndex++];
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Index out of array's bounds");
+            }
+        }
+
+        public bool Remove(T item)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (arrayList[i].Equals(item))
+                {
+                    RemoveAt(i);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public int IndexOf(T item)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (arrayList[i].Equals(item))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public void RemoveAt(int index)
+        {
+            if (index < count && index >= 0)
+            {
+                for (int i = index; i < count; i++)
+                {
+                    Add(arrayList[i + 1], i);
+                }
+                count--;
+                if (count - 1 <= Capacity / 2)
+                {
+                    Array.Resize(ref arrayList, arrayList.Length / 2);
+                }
+            }
+            else
+            {
+                Console.WriteLine("******** Deletion failed!  Index is out of Collection's size. ********");
+            }
+        }
+
+        public void Insert(int index, T item)
+        {
+            if (index < count && index >= 0)
+            {
+                for (int i = count; i >= index; i--)
+                {
+                    Add(arrayList[i - 1], i);
+                }
+                count++;
+                Add(item, index);
+            }
+            else
+            {
+                Console.WriteLine("******** Insertion failed!  Index is out of Collection's size. ********");
+            }
+        }
+
+        public void Reverse()
+        {
+            for (int i = 0; i < count / 2; i++)
+            {
+                T tmp = arrayList[i];
+                arrayList[i] = arrayList[count - i - 1];
+                arrayList[count - i - 1] = tmp;
+            }
+        }
+
+        public void Sort()
+        {
+            Array.Sort(arrayList);
         }
     }
 }
