@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20210204194928_ShopDb")]
-    partial class ShopDb
+    [Migration("20210205094258_Payments")]
+    partial class Payments
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,6 +44,21 @@ namespace Infrastructure.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("OrderItem");
+                });
+
+            modelBuilder.Entity("Infrastructure.PaymentMethod", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("PayMethod")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PaymentMethods");
                 });
 
             modelBuilder.Entity("Infrastructure.Product", b =>

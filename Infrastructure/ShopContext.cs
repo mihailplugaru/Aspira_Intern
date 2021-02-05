@@ -11,6 +11,7 @@ namespace Infrastructure
         public DbSet<Product> Product { get; set; }
         public DbSet<Stock> Stock { get; set; }
         public DbSet<OrderItem> OrderItem { get; set; }
+        public DbSet<PaymentMethod> PaymentMethods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

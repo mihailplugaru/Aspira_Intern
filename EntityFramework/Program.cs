@@ -9,16 +9,56 @@ namespace EntityFramework
         {
             using (UnitOfWork unitOfWork = new UnitOfWork(new ShopContext()))
             {
-                var product = new Product()
+                var apaOM = new Product()
                 {
                     Name = "Apa minerala Om",
                     Type = "Bauturi nealcoolice",
-                    Price = 10.40F
+                    Price = 10.50F
                 };
+                var paineNeagra = new Product()
+                {
+                    Name = "Franzeluta Paine Neagra",
+                    Type = "Fainoase",
+                    Price = 5.20F
+                };
+                var lapteAlba = new Product()
+                {
+                    Name = "Alba Lapte 2,5",
+                    Type = "Lactate",
+                    Price = 9.75F
+                };
+
+                var stock1 = new Stock()
+                {
+                    Quantity = 5,
+                    Product = apaOM,
+                    ProductId = apaOM.Id
+                };
+
+                var orderItem1 = new OrderItem()
+                {
+                    Quantity = 1,
+                    Product = apaOM,
+                    ProductId = apaOM.Id
+                };
+
+                unitOfWork.Product.Add(apaOM);
+                unitOfWork.Product.Add(paineNeagra);
+                unitOfWork.Product.Add(lapteAlba);
+
+                unitOfWork.Stock.Add(stock1);
+                unitOfWork.OrderItem.Add(orderItem1);
+                unitOfWork.Complete();
+
 
                 var allProds = unitOfWork.Product.GetAll();
 
-                var prod1 = unitOfWork.Product.Find(x => x.Id == 3);
+                foreach (var prod in allProds)
+                {
+                    Console.WriteLine(prod);
+                }
+
+                var prod1 = unitOfWork.Product.Find(x => x.Type == "Fainoase");
 
                 foreach (var prod in prod1)
                 {

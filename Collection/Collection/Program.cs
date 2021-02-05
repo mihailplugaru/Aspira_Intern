@@ -10,30 +10,36 @@ namespace Collection
     {
         static void Main(string[] args)
         {
+           
             MyCollection<int> col = new MyCollection<int>();
+            MyCollection<string> col1 = new MyCollection<string>() { "Z", "b", "123", "Mihail" };
+            col1.Sort();
+
+
 
             col.Add(1);
             col.Add(2);
             col.Add(3);
-            Console.WriteLine("\nArray Capacity = " + col.Capacity);
             col.Add(4);
+            Console.WriteLine("\nArray Capacity = " + col.Capacity);
+
             col.Add(5);
             col.Add(6);
             Console.WriteLine("\nArray Capacity = " + col.Capacity);
-            col.Add(7);
-            col.Add(8);
+            //col.Add(7);
+            //col.Add(8);
 
-            int[] someArray = new int[8] { 9, 9, 9, 9, 9, 9, 9, 9 };
+            int[] someArray = new int[6];
 
             //                   Add Range
-            col.AddRange(someArray);
-            Console.WriteLine("\nArray Capacity = " + col.Capacity);
-            Console.WriteLine("Array Count = " + col.Count);
+            //col.AddRange(someArray);
+            //Console.WriteLine("\nArray Capacity = " + col.Capacity);
+            //Console.WriteLine("Array Count = " + col.Count);
 
-            //                   Reverse
+            //Reverse
             col.Reverse();
 
-            //                   Sort
+            //Sort
             //col.Sort();
 
             //                   Inserting
@@ -41,12 +47,12 @@ namespace Collection
             //Console.WriteLine("\nArray Capacity = " + col.Capacity);
             //Console.WriteLine("Array Count = " + col.Count);
             //                   Removing At Index
-            //col.RemoveAt(9);
+            //col.RemoveAt(6);
             //Console.WriteLine("\nArray Capacity = " + col.Capacity);
             //Console.WriteLine("Array Count = " + col.Count);
 
             //                   Removing Item
-            //Console.WriteLine("\nItem successfully removed - "+col.Remove(9));
+            //Console.WriteLine("\nItem successfully removed - " + col.Remove(5));
             //Console.WriteLine("\nArray Capacity = " + col.Capacity);
             //Console.WriteLine("Array Count = " + col.Count);
 
@@ -57,7 +63,7 @@ namespace Collection
 
             //                   Copy To
             //Console.WriteLine("\nCopying the List to Some Array...");
-            //col.CopyTo(someArray, 8);
+            //col.CopyTo(someArray, 3);
 
             //foreach (var element in someArray)
             //{

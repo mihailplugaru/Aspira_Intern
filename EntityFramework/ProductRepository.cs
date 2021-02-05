@@ -16,6 +16,7 @@ namespace EntityFramework
         {
             get { return Context as ShopContext; }
         }
+
         public IEnumerable<Product> GetCheapestProducts()
         {
             return ShopContext.Product
