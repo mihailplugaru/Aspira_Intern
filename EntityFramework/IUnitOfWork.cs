@@ -9,6 +9,8 @@ namespace EntityFramework
         IProductRepository Product { get; }
         IStockRepository Stock { get; }
         IOrderItemRepository OrderItem { get; }
+        IPurchaseRepository Purchase { get; }
+        IPaymentMethodRepository PaymentMethod { get; }
 
         int Complete();
     }

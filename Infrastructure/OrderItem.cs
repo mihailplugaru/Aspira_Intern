@@ -8,7 +8,6 @@ namespace Infrastructure
 {
     public class OrderItem
     {
-        [Key]
         public int Id { get; set; }
         public int Quantity { get; set; }
 
@@ -17,9 +16,12 @@ namespace Infrastructure
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 
+        public int PurchaseId { get; set; }
+        public virtual Purchase Purchase { get; set; }
+
         public override string ToString()
         {
-            return $"Id : {Id}  Quantity : {Quantity}  DateTime : {DateTime}  ProductId : {ProductId}";
+            return $"Id : {Id}  Quantity : {Quantity}  DateTime : {DateTime}  ProductId : {ProductId}  PurchaseId: {PurchaseId}";
         }
     }
 }

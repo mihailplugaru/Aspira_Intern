@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20210205094258_Payments")]
-    partial class Payments
+    [Migration("20210214135126_ShopDb")]
+    partial class ShopDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,11 +29,14 @@ namespace Infrastructure.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("DateTime")
-                        .ValueGeneratedOnAddOrUpdate()
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasComputedColumnSql("getdate()");
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PurchaseId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -42,6 +45,8 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("PurchaseId");
 
                     b.ToTable("OrderItem");
                 });
@@ -58,7 +63,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PaymentMethods");
+                    b.ToTable("PaymentMethod");
                 });
 
             modelBuilder.Entity("Infrastructure.Product", b =>
@@ -82,6 +87,28 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("Infrastructure.Purchase", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("DateTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
+
+                    b.Property<int>("PaymentMethodId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PaymentMethodId");
+
+                    b.ToTable("Purchase");
                 });
 
             modelBuilder.Entity("Infrastructure.Stock", b =>
@@ -112,7 +139,26 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Infrastructure.Purchase", "Purchase")
+                        .WithMany("OrderedItems")
+                        .HasForeignKey("PurchaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Product");
+
+                    b.Navigation("Purchase");
+                });
+
+            modelBuilder.Entity("Infrastructure.Purchase", b =>
+                {
+                    b.HasOne("Infrastructure.PaymentMethod", "PaymentMethod")
+                        .WithMany()
+                        .HasForeignKey("PaymentMethodId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PaymentMethod");
                 });
 
             modelBuilder.Entity("Infrastructure.Stock", b =>
@@ -124,6 +170,11 @@ namespace Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Infrastructure.Purchase", b =>
+                {
+                    b.Navigation("OrderedItems");
                 });
 #pragma warning restore 612, 618
         }
