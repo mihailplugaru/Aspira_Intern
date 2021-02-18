@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>CV Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background-color: lightgray;
+            max-width: 800px;
+            margin: auto;
+            padding: 10px;
+            overflow: auto;
+            border: inset;
+        }
+
+        #header-div1 {
+            background-color: darkgrey;
+            overflow: auto;
+        }
+
+        .custom-file input[type='file'] {
+            display: none
+        }
+
+        .custom-file label {
+            cursor: pointer;
+            background-color: darkgrey;
+        }
+
+        .header-text {
+            padding-left: 250px;
+            flex-direction: column;
+        }
+
+        .main-section {
+            float: left;
+        }
+
+        .main-headers {
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="body-header">
+        <div id="header-div1">
+            <img id="profile-image" class="profile-images" src="default-image.png" width="200" height="220"
+                alt="Profile Image" style="float: left" />
+
+            <div id="header-div1-name" class="header-text">
+                <input id="user-input-Name" class="user-input" type="text" placeholder="Full Name"
+                    style="margin-top: 45px;">
+            </div>
+
+            <div id="header-div1-position" class="header-text">
+                <input id="user-input-position" class="user-input" type="text" value="Position">
+            </div>
+
+            <div id="header-div1-address" class="header-text" style="margin-top: 25px;">
+                <input id="user-input-adress" class="user-input" type="text" value="Full Adress">
+            </div>
+
+            <div id="header-div1-contacts" class="header-text">
+                <input id="user-input-contacts" class="user-input" type="text" value="Contacts: phone, mail">
+            </div>
+        </div>
+        <div id="header-div2" class="custom-file">
+            <label for="fileupload">Upload Image</label>
+            <input type="file" id="fileupload">
+            <button id="header-edit-button" class="user-input" style="float: right">Edit</button>
+        </div>
+    </header>
+    <main id="body-main" style=" overflow: auto ">
+        <section id="main-section1" class="main-section" style="width: 30%">
+            <h3 id="main-header-skill-general" class="main-headers" style="margin: 30px 0px 20px 25px">
+                Skills
+            </h3>
+            <ul id="list-skill-general" style="list-style-type:square; padding:0px; margin-left: 20px">
+            </ul>
+            <div id="main-div1-skills">
+                <input id="user-input-skills" class="user-input" type="text" placeholder="Skill">
+            </div>
+            <h3 id="main-header-skill-languages" class="main-headers" style="margin: 30px 0px 20px 25px">
+                Languages
+            </h3>
+            <ul id="list-skill-languages" style="list-style-type:square; padding:0px; margin-left: 20px">
+            </ul>
+            <div id="main-div1-languages">
+                <input id="user-input-languages" class="user-input" type="text" placeholder="Language">
+            </div>
+        </section>
+        <section id="main-section2" class="main-section" style="width: 70%">
+            <ul id="list-profile-work-education" style="list-style-type:none">
+                <li id="profile-info">
+                    <h3 id="main-header-profile" class="main-headers" style="margin: 30px 0px 15px 10px">
+                        Profile
+                    </h3>
+                    <p id="profile-info-p1" style="margin: 15px 0px 0px 0px;
+                       text-indent: 30px;text-align:justify">
+                    </p>
+                    <div id="main-div2-profile">
+                        <textarea id="user-input-profile" class="user-input" rows="4" cols="40">Some Info about me.</textarea>
+                        <button id="submit-profile-info" class="user-input">Submit profile info</button>
+                    </div>
+                </li>
+                <li id="work-info">
+                    <h3 id="main-header-work-experience" class="main-headers" style="margin: 30px 0px 5px 10px">
+                        Work Experience
+                    </h3>
+                    <div id="main-div2-work">
+                    </div>
+                    <div id="div-input-work">
+                        <input id="user-input-work" class="user-input" type="text" placeholder="Place and Time Period">
+                    </div>
+                    <div id="hidden-input" hidden><input id="user-input-responsibility-item" class="user-input" type="text"
+                            placeholder="Responsibilities"></div>
+                    <button id="submit-this-work" class="user-input">Mention other Work</button>
+                </li>
+                <li hidden id="education-info">
+
+                    <h3 id="main-header-education" class="main-headers" style="margin: 30px 0px 5px 10px">
+                        Education
+                    </h3>
+                    <ul id="main-list-education" style="list-style-type:circle">
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer id="footer">
+        <span id="footer-span1"
+            style="text-align:center; margin:5px 100px 5px 220px; background-color: darkgrey"></span>
+        <button id="footer-button1" class="user-input">I'm DONE</button>
+    </footer>
+    <script src="main - Updated.js"></script>
+</body>
+
+</html>

@@ -11,6 +11,7 @@ namespace Infrastructure
         public string Name { get; set; }
         public string Type { get; set; }
         public float Price { get; set; }
+        public string Store { get; set; }
 
         public override string ToString()
         {

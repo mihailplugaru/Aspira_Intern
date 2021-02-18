@@ -28,14 +28,12 @@ namespace EntityFramework
                     Type = "Lactate",
                     Price = 9.75F
                 };
-
                 var stock1 = new Stock()
                 {
                     Quantity = 5,
                     Product = apaOM,
                     ProductId = apaOM.Id
                 };
-
                 var orderItem1 = new OrderItem()
                 {
                     Quantity = 1,
@@ -43,7 +41,6 @@ namespace EntityFramework
                     ProductId = apaOM.Id,
                     PurchaseId = 1
                 };
-
                 var orderItem2 = new OrderItem()
                 {
                     Quantity = 2,
@@ -51,17 +48,16 @@ namespace EntityFramework
                     ProductId = paineNeagra.Id,
                     PurchaseId = 1
                 };
-
                 var paymentMethod1 = new PaymentMethod()
                 {
                     PayMethod = "Cash"
                 };
-
                 var purchase1 = new Purchase()
                 {
                     PaymentMethodId = 1,
                     PaymentMethod = paymentMethod1
                 };
+
                 purchase1.OrderedItems.Add(orderItem1);
                 purchase1.OrderedItems.Add(orderItem2);
 
