@@ -12,4 +12,10 @@ export class FirstParentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  parentInputs = [];
+  onClickSubmit(inputValue: string) {
+    if (inputValue) {
+      this.parentInputs.push(inputValue);
+    }
+  }
 }
