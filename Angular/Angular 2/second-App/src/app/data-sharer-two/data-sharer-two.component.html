@@ -1,0 +1,6 @@
+<div>
+    <div style="background-color:{{twoInput}}">
+        <input type="text" [ngModel]="twoInput" (ngModelChange)="twoInput = $event" (ngModelChange)="tellInput()">
+    </div>
+    <p [ngStyle]="{color: twoInput}">It's just for the color!</p>
+</div>
