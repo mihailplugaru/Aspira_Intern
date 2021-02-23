@@ -1,0 +1,11 @@
+<div style="margin-top:50px">
+    <p>Last added name : {{empName}}</p>
+    <p>Last added position : {{empPosition}}</p>
+
+    <mat-selection-list #employees [multiple]="false">
+        <strong> List of Employees:</strong>
+        <mat-list-option *appNgForLoop="let emp of employeeList; index as i">{{i+1}}. {{emp.empName}} ->
+            {{emp.empPosition}}
+        </mat-list-option>
+    </mat-selection-list>
+</div>

@@ -1,0 +1,17 @@
+<div class="addEmployee">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Employee name" #matInput1>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Position</mat-label>
+            <input matInput placeholder="Employee position" #matInput2>
+        </mat-form-field>
+        <button mat-button color="primary"
+            (click)="onClickSubmit(matInput1.value, matInput2.value); matInput1.value=''; matInput2.value='' ">Submit
+            Input</button>
+    </form>
+    <app-display-employee [empName]="nameInput" [empPosition]="positionInput"></app-display-employee>
+</div>
