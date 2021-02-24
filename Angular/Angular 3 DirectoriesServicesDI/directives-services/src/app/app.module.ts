@@ -14,13 +14,19 @@ import { MatListModule } from '@angular/material/list';
 import { NgForLoopDirective } from './Directives/ng-for-loop.directive';
 import { RegisterEmployeesService } from './services/registerEmployees.service';
 import { MatSelectModule } from '@angular/material/select';
+import { IncreaseFontTwiceDirective } from './Directives/increase-font-twice.directive';
+import { DecreaseFontTwiceDirective } from './Directives/decrease-font-twice.directive';
+import { DebounceClickDirective } from './Directives/debounce-click.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEmployeeComponent,
     DisplayEmployeeComponent,
-    NgForLoopDirective
+    NgForLoopDirective,
+    IncreaseFontTwiceDirective,
+    DecreaseFontTwiceDirective,
+    DebounceClickDirective
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule
   ],
   providers: [RegisterEmployeesService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [NgForLoopDirective]
 })
 
 export class AppModule { }

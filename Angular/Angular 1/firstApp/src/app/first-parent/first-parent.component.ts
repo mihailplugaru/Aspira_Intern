@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstParentComponent implements OnInit {
 
+  parentInputs = [];
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  parentInputs = [];
   onClickSubmit(inputValue: string) {
     if (inputValue) {
       this.parentInputs.push(inputValue);

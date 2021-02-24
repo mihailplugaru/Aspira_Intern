@@ -1,4 +1,3 @@
-import { registerLocaleData } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
 import { RegisterEmployeesService } from '../services/registerEmployees.service';
 
