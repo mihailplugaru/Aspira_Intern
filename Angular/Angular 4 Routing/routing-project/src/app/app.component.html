@@ -1,0 +1,10 @@
+<mat-tab-group (selectedTabChange)="onTabChanged($event)">
+<mat-tab label="Events"></mat-tab>
+<mat-tab label="Places"> ... content there ... </mat-tab>
+<mat-tab label="Tickets"> ... content there ... </mat-tab>
+</mat-tab-group>
+
+<div>
+  <span><a routerLink="/events" routerLinkActive="active">Events</a></span>
+</div>
+<router-outlet></router-outlet>

@@ -1,5 +1,4 @@
 import { Directive, ElementRef, HostListener } from "@angular/core";
-import { ClickContext } from "../Classes/ClickContext";
 
 @Directive({
   selector: '[appDecreaseFontTwice]'
