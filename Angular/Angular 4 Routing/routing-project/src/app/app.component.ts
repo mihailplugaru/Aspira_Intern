@@ -15,10 +15,16 @@ export class AppComponent {
   onTabChanged(event: MatTabChangeEvent): void {
     switch (event.index) {
       case 0:
-        this.router.navigate(['/events']);
+        this.router.navigate(['/home']);
         console.log('Tab 0 clicked');
         break;
       case 1:
+        this.router.navigate(['/restparty']);
+        console.log('Tab 1 clicked');
+        break;
+      case 2:
+        this.router.navigate(['/work']);
+        console.log('Tab 2 clicked');
         break;
     }
   }
