@@ -1,0 +1,13 @@
+<h3>All inputs go here!</h3>
+<div>
+    <div>
+        <label for="Name for Subject"> <input #names type="text" placeholder="subject's name"></label>
+        <button (click)="namesToSubject(names.value); names.value=''">Submit name for Subject</button>
+        <br><br>
+    </div>
+    <div>
+        <label for="Name of person"> <input #name type="text" placeholder="Person's name"></label>
+        <label for="Age of person"> <input #age type="number" placeholder="Person's age"></label>
+        <button (click)="personToObservable(name.value, age.value); name.value=''; age.value=''">Submit Person</button>
+    </div>
+</div>

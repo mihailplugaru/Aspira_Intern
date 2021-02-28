@@ -1,0 +1,15 @@
+<h3>All names go here!</h3>
+<div *ngIf="(namesFromSubject$) as names">
+  <ul>Names from ReplaySubject :
+    <li *ngFor="let name of names; index as i">
+      {{ i + 1 }}. {{ name }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="(persons$) as persons">
+  <ul>Persons :
+    <li *ngFor="let person of persons; index as i">
+      {{ i + 1 }}. {{ person.name }}
+    </li>
+  </ul>
+</div>
