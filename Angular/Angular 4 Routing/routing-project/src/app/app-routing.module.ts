@@ -32,8 +32,7 @@ const routes: Routes = [
     component: TicketsComponent
   },
   {
-    path: '',
-    component: HomeComponent
+    path: '', redirectTo: '/home', pathMatch: 'full'
   },
   {
     path: '**',

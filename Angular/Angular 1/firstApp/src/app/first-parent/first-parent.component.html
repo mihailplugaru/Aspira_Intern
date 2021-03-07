@@ -2,6 +2,7 @@
     <div style="background-color: grey">
         <input #inputId type="text" (keyup.enter)="onClickSubmit(inputId.value);  inputId.value='' ">
         <button (click)="onClickSubmit(inputId.value); inputId.value='' " >Submit Input</button>
+        <p>{{recInfo}}</p>
     </div>
-    <app-first-child [childInput]="parentInputs"></app-first-child>
+    <app-first-child [childInput]="parentInputs" (sentInfo)="receivedInfo($event)"></app-first-child>
 </div>

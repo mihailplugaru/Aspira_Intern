@@ -6,7 +6,7 @@ import { Employee } from '../Classes/Employee';
 })
 export class RegisterEmployeesService {
 
-  employees = [];
+  employees : Employee[] =[];
 
   constructor() { }
 

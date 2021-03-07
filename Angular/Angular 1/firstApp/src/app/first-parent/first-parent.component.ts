@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class FirstParentComponent implements OnInit {
 
   parentInputs = [];
-  
+  recInfo : string;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,5 +19,9 @@ export class FirstParentComponent implements OnInit {
     if (inputValue) {
       this.parentInputs.push(inputValue);
     }
+  }
+  
+  receivedInfo(info : string){
+      this.recInfo = info;
   }
 }

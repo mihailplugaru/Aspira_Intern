@@ -6,14 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./data-sharer-one.component.css']
 })
 export class DataSharerOneComponent implements OnInit {
-  @Input('oneInput') oneInput: string;
+  oneInput: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  hearInput($event) {
+  twoInput($event) {
     this.oneInput = $event;
   }
 }

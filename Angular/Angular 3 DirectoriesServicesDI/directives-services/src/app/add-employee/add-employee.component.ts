@@ -20,7 +20,9 @@ export class AddEmployeeComponent implements OnInit {
       this.nameInput = name;
       this.positionInput = position;
 
-      this.registerEmployees.addEmployee(new Employee(this.nameInput, this.positionInput))
+      const newEmp = new Employee(this.nameInput, this.positionInput);
+
+      this.registerEmployees.addEmployee(newEmp);
     }
   }
 

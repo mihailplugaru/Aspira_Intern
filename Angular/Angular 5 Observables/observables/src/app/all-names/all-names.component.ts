@@ -10,7 +10,7 @@ import { SavePersonsToObservableService } from '../services/save-persons-to-obse
 export class AllNamesComponent implements OnInit {
 
   namesFromSubject$ = [];
-  persons$ = [];
+  persons = [];
 
   constructor(private saveNamesToSubject: SaveNamesToSubjectService, private savePersonsToObservable : SavePersonsToObservableService) { }
 
@@ -20,7 +20,7 @@ export class AllNamesComponent implements OnInit {
     });
 
     this.savePersonsToObservable.getPerson$.subscribe(p => {
-      this.persons$ = (p);
+      this.persons = (p);
     });
   }
 }

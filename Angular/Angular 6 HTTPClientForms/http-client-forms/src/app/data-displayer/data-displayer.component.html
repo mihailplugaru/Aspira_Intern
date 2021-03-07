@@ -1,0 +1,24 @@
+<div style="margin-left: 50px;">
+    <h3>HttpClient Work:</h3>
+    <button (click)="getAlbums()">Get Album</button>
+
+    <table class="full-width">
+        <thead>
+            <th>User Id</th>
+            <th>Id</th>
+            <th class="align-left">Title</th>
+        </thead>
+        <tbody class="align-center">
+            <tr *ngFor="let album of albums | paginate: { itemsPerPage: 10, currentPage: p }">
+                <td>{{album.userId}}</td>
+                <td>{{album.id}}</td>
+                <td class="align-left">{{album.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <br><br>
+    <button (click)="postAlbum()">Post Album</button>
+    <button (click)="updateAlbum()">Update Album</button>
+    <button (click)="deleteAlbum()">Delete Album</button>
+</div>

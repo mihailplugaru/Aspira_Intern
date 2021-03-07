@@ -1,0 +1,55 @@
+<div style="margin-left: 50px;">
+    <h3>User Creation</h3>
+    <div [hidden]="submitted">
+        <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div>
+                <label for="fname">First Name : </label>
+                <input id="fname" type="text" formControlName="fname" required placeholder="first name">
+            </div>
+            <div>
+                <label for="lname">Last Name : </label>
+                <input id="lname" type="text" formControlName="lname">
+            </div>
+            <div>
+                <label for="name">Age : </label>
+                <input id="age" type="text" formControlName="age">
+            </div>
+            <div>
+                <label for="name">Email : </label>
+                <input id="email" type="text" formControlName="email">
+            </div>
+            <div>
+                <label for="name">Phone Number : </label>
+                <input id="phone" type="text" formControlName="phone">
+            </div>
+            <button [disabled]="!f.form.valid" type="submit">Submit</button>
+            <button style="margin-left: 50px;" (click)="goToUsersTable()">Show Users Table</button>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+            <span>First Name : </span>
+            <span>{{ fname.value }}</span>
+        </div>
+        <div class="row">
+            <span>Second name : </span>
+            <span>{{ lname.value }}</span>
+        </div>
+        <div class="row">
+            <span>Age : </span>
+            <span>{{ age.value }}</span>
+        </div>
+        <div class="row">
+            <span>Email : </span>
+            <span>{{ email.value }}</span>
+        </div>
+        <div class="row">
+            <span>Phone : </span>
+            <span>{{ phone.value }}</span>
+        </div>
+        <br>
+        <button (click)="submitted=false">Edit</button>
+        <button style="margin-left: 50px;" (click)="submitUser()">Submit this and show Users Table</button>
+    </div>
+</div>

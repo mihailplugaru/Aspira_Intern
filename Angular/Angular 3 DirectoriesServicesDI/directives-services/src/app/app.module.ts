@@ -16,7 +16,6 @@ import { RegisterEmployeesService } from './services/registerEmployees.service';
 import { MatSelectModule } from '@angular/material/select';
 import { IncreaseFontTwiceDirective } from './Directives/increase-font-twice.directive';
 import { DecreaseFontTwiceDirective } from './Directives/decrease-font-twice.directive';
-import { DebounceClickDirective } from './Directives/debounce-click.directive';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { DebounceClickDirective } from './Directives/debounce-click.directive';
     DisplayEmployeeComponent,
     NgForLoopDirective,
     IncreaseFontTwiceDirective,
-    DecreaseFontTwiceDirective,
-    DebounceClickDirective
+    DecreaseFontTwiceDirective
   ],
   imports: [
     BrowserModule,

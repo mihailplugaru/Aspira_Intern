@@ -2,12 +2,12 @@
     <form class="example-form">
         <mat-form-field class="example-full-width">
             <mat-label>Name</mat-label>
-            <input matInput placeholder="Employee name" #matInput1>
+            <input matInput placeholder="Employee name" #matInput1 autocomplete="off">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Position</mat-label>
-            <input matInput placeholder="Employee position" #matInput2>
+            <input matInput placeholder="Employee position" #matInput2 autocomplete="off">
         </mat-form-field>
         <button mat-button color="primary"
             (click)="onClickSubmit(matInput1.value, matInput2.value); matInput1.value=''; matInput2.value='' ">Submit

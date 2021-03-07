@@ -3,4 +3,6 @@
         Inputs from Parent:
         <li  *ngFor="let input of childInput">{{input}}</li>
     </ul>
+    <input #input1 type="text">
+    <button (click)="sendInfo(input1.value)">Submit</button>
 </div>

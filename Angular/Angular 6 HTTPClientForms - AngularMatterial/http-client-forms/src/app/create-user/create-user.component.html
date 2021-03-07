@@ -1,0 +1,85 @@
+<div style="margin-left: 50px;">
+    <mat-card>Create a User</mat-card>
+    <div [hidden]="submitted">
+        <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <mat-form-field class="input">
+                <mat-label>First Name</mat-label>
+                <input id="fname" type="name" matInput [formControl]="fname" [errorStateMatcher]="matcher" placeholder="Your First Name">
+                <mat-hint>Your First Name
+                </mat-hint>
+                <mat-error *ngIf="fname.hasError(' minlength ')">
+                    Must be at least 2 characters
+                </mat-error>
+                <mat-error *ngIf="fname.hasError('required ')">
+                    First Name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="input">
+                <mat-label>Last Name</mat-label>
+                <input id="lname" type="name" matInput [formControl]="lname" [errorStateMatcher]="matcher" placeholder="Your Last Name">
+                <mat-hint>Your Last Name
+                </mat-hint>
+                <mat-error *ngIf="lname.hasError('minlength ')">
+                    Must be at least 2 characters
+                </mat-error>
+                <mat-error *ngIf="lname.hasError('required ')">
+                    Last Name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="input">
+                <mat-label>Age</mat-label>
+                <input id="age" type="age" matInput [formControl]="age" [errorStateMatcher]="matcher" placeholder="Your Age">
+                <mat-hint>Your Age
+                </mat-hint>
+                <mat-error *ngIf="age.hasError('min ')">
+                    Must be at least 18 years
+                </mat-error>
+                <mat-error *ngIf="age.hasError('max ')">
+                    Check your age again, please
+                </mat-error>
+                <mat-error *ngIf="age.hasError('pattern ')">
+                    Only numbers here
+                </mat-error>
+                <mat-error *ngIf="age.hasError('required ')">
+                    Age is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="input">
+                <mat-label>Email</mat-label>
+                <input id="email" type="email" matInput [formControl]="email" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+                <mat-hint>Your email address
+                </mat-hint>
+                <mat-error *ngIf="email.hasError('email ')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="email.hasError('required ')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="input">
+                <mat-label>Phone</mat-label>
+                <input id="phone" type="phone" matInput [formControl]="phone" [errorStateMatcher]="matcher" placeholder="Yout Phone">
+                <mat-hint>Your phone
+                </mat-hint>
+                <mat-error *ngIf="phone.hasError('pattern ')">
+                    Please enter a valid Phone Number
+                </mat-error>
+                <mat-error *ngIf="phone.hasError('required ')">
+                    Phone is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="!f.form.valid" type="submit">Submit</button>
+        </form>
+    </div>
+    <button mat-raised-button color="primary" (click)="goToUsersTable()">Show Users Table</button>
+    <div [hidden]="!submitted">
+        <mat-card>You submitted the following : </mat-card>
+        <mat-card>First Name : {{ fname.value }}</mat-card>
+        <mat-card>Second name : {{ lname.value }}</mat-card>
+        <mat-card>Age : {{ age.value }}</mat-card>
+        <mat-card>Email : {{ email.value }}</mat-card>
+        <mat-card>Phone : {{ phone.value }}</mat-card>
+        <button mat-raised-button color="primary" (click)="submitted=false">Edit</button>
+        <button mat-raised-button color="primary" (click)="submitUser()">Submit this and show Users Table</button>
+    </div>
+</div>

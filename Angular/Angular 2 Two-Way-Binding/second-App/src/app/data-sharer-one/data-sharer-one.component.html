@@ -1,7 +1,7 @@
 <div>
     <div style="background-color:{{oneInput}}">
-        <input type="text" [ngModel]="oneInput" (ngModelChange)="oneInput = $event">
+        <input type="text" [(ngModel)]="oneInput">
     </div>
     <br>
-    <app-data-sharer-two [twoInput]="oneInput" (twoInputEvent)="hearInput($event)"></app-data-sharer-two>
+    <app-data-sharer-two [(twoInput)]="oneInput"></app-data-sharer-two>
 </div>
