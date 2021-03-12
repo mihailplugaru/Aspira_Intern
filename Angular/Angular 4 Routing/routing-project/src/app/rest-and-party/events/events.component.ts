@@ -15,6 +15,6 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void { }
 
   onClick(): void {
-    this.router.navigate(['/restparty']);
+    this.router.navigate(['/home']);
   }
 }

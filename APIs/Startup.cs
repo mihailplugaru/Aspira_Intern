@@ -47,6 +47,11 @@ namespace APIs
                 });
             });
 
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
+
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
         }
@@ -74,6 +79,13 @@ namespace APIs
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors(x => x
+             .AllowAnyOrigin()
+             .AllowAnyMethod()
+             .AllowAnyHeader());
+
+            app.UseHttpsRedirection();
         }
     }
 }

@@ -44,8 +44,8 @@ namespace EntityFramework
                 var orderItem2 = new OrderItem()
                 {
                     Quantity = 2,
-                    Product = paineNeagra,
-                    ProductId = paineNeagra.Id,
+                    Product = lapteAlba,
+                    ProductId = lapteAlba.Id,
                     PurchaseId = 1
                 };
                 var paymentMethod1 = new PaymentMethod()

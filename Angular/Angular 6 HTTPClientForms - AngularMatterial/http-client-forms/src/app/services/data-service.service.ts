@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { Album } from '../interfaces/Album';
+import { User } from '../models/User';
 
 
 @Injectable({
@@ -17,11 +17,11 @@ export class DataServiceService {
     return this.httpClient.get(this.baseUrl);
   }
 
-  postAlbum(album : Album) : Observable<any>{
+  postAlbum(album : User) : Observable<any>{
     return this.httpClient.post(this.baseUrl, album);
   }
 
-  putAlbum(album : Album){
+  putAlbum(album : User){
     return this.httpClient.put(this.baseUrl+"/1", album);
   }
 

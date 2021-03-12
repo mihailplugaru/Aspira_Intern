@@ -8,7 +8,10 @@ namespace Data.Entities
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Type { get; set; }
-        public float Weight { get; set; }
+        public string Description { get; set; } 
+        [Required]
+        public string Category { get; set; }
+        [Required]
+        public float Price { get; set; }
     }
 }

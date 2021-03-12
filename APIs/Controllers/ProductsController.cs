@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Data;
 using Data.Entities;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,7 +11,7 @@ namespace Controllers
 {
     [ApiController]
     [Produces("application/json")]
-    [Route("[controller]")]
+    [Route("/api/[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly DataContext _context;
@@ -24,6 +25,8 @@ namespace Controllers
         /// </summary>
         /// <returns>All products</returns>
         [HttpGet]
+        [Route("GetAllAuthor")]
+        [EnableCors("AllowOrigin")]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             return await _context.Products.ToListAsync();
@@ -97,8 +100,9 @@ namespace Controllers
             {
                 Id = oldProduct.Id,
                 Name = product.Name,
-                Type = product.Type,
-                Weight = product.Weight
+                Description = product.Description,
+                Category = product.Category,
+                Price = product.Price
             };
             _context.Entry(oldProduct).CurrentValues.SetValues(newProduct);
             await _context.SaveChangesAsync();
